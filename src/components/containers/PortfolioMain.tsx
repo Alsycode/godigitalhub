@@ -9,28 +9,52 @@ import fifteen from "public/images/projectlist/london.png";
 import sixteen from "public/images/projectlist/satm.png";
 import seventeen from "public/images/projectlist/svjs.png";
 import eighteen from "public/images/projectlist/londonmumbai.png";
-
-const PortfolioMain = ({workData}) => {
-// Usage example:
-function getItemInfo(workData, index) {
-  const item = workData?.data[index]?.attributes;
-
-  return {
-    title: item?.title,
-    slug: item?.slug,
-    image: item?.image?.data?.attributes?.formats?.large?.url
+interface WorkDataItem {
+  data: {
+    attributes: {
+      title: string;
+      slug: string;
+      image: {
+        data: {
+          attributes: {
+            formats: {
+              large: {
+                url: string;
+              };
+            };
+          };
+        };
+      };
+    };
   };
 }
 
-const firstItem = getItemInfo(workData, 0);
-const secondItem = getItemInfo(workData, 1);
-const thirdItem = getItemInfo(workData, 2);
-const fourthItem = getItemInfo(workData, 3);
-const fifthItem = getItemInfo(workData, 4);
-const sixthItem = getItemInfo(workData, 5);
-const seventhItem = getItemInfo(workData, 6);
-const eighthItem = getItemInfo(workData, 7);
-const ninthItem = getItemInfo(workData, 8);
+interface PortfolioMainProps {
+  workData: WorkDataItem[];
+}
+
+const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
+  // Function to get item info
+  function getItemInfo(index: number) {
+    const item = workData[index]?.data?.attributes;
+
+    return {
+      title: item?.title,
+      slug: item?.slug,
+      image: item?.image?.data?.attributes?.formats?.large?.url,
+    };
+  }
+
+  const firstItem = getItemInfo(0);
+  const secondItem = getItemInfo(1);
+  const thirdItem = getItemInfo(2);
+  const fourthItem = getItemInfo(3);
+  const fifthItem = getItemInfo(4);
+  const sixthItem = getItemInfo(5);
+  const seventhItem = getItemInfo(6);
+  const eighthItem = getItemInfo(7);
+  const ninthItem = getItemInfo(8);
+
 
   return (
     <section className="section portfolio-m fade-wrapper">
