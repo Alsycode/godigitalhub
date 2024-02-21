@@ -7,8 +7,28 @@ import "swiper/swiper-bundle.css";
 import three from "public/images/blog/three.png";
 import four from "public/images/blog/four.png";
 import five from "public/images/blog/five.png";
-
-const HomeTwoBlog = ({blogsData}) => {
+interface BlogData {
+  data: {
+    attributes: {
+      image: {
+        data: {
+          attributes: {
+            formats: {
+              large: {
+                url: string;
+              };
+            };
+          };
+        };
+      };
+      author: string;
+      date: string;
+      title: string;
+      description: string;
+    };
+  }[];
+}
+const HomeTwoBlog = ({ blogsData }: { blogsData: BlogData }) => {
   return (
     <section className="section blog blog-two">
       <div className="container">
