@@ -7,32 +7,9 @@ import "swiper/swiper-bundle.css";
 import sthumb from "public/images/testimonial/s-thumb.png";
 import sthumbtwo from "public/images/testimonial/s-thumb-two.png";
 import sthumbthree from "public/images/testimonial/s-thumb-three.png";
-interface Testimonial {
-  attributes: {
-    image: {
-      data: {
-        attributes: {
-          formats: {
-            small: {
-              url: string;
-            };
-          };
-        };
-      };
-    };
-    text: string;
-    name: string;
-    designation: string;
-  };
-}
 
-interface Props {
-  testimonials: {
-    data: Testimonial[];
-  };
-}
 
-const HomeTestimonial: React.FC<Props> = ({ testimonials }) => {
+const HomeTestimonial = ({ testimonials }: { testimonials: any }) => {
   const [nextSlideIndex, setNextSlideIndex] = useState<number>(1);
 
   const handleSlideChange = (swiper: any) => {
@@ -155,7 +132,7 @@ const HomeTestimonial: React.FC<Props> = ({ testimonials }) => {
                 onSlideChange={(swiper) => handleSlideChange(swiper)}
                 className="testimonial-s__slider"
               >
-              {testimonials?.data?.map((testimony) => (<SwiperSlide>
+              {testimonials?.data?.map((testimony: any) => (<SwiperSlide>
                 <div className="testimonial-s__slider-single">
                   <div className="row gaper align-items-center">
                     <div className="col-12 col-lg-4 col-xxl-4">
