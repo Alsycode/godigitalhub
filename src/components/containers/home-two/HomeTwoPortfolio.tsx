@@ -10,23 +10,24 @@ import three from "public/images/portfolio/three.png";
 import four from "public/images/portfolio/four.png";
 import five from "public/images/portfolio/five.png";
 interface WorkDataItem {
-  data: {
-    attributes: {
-      title: string;
-      slug: string;
-      image: {
-        data: {
-          attributes: {
-            formats: {
-              large: {
-                url: string;
-              };
+  attributes: {
+    title: string;
+    image: {
+      data: {
+        attributes: {
+          formats: {
+            large: {
+              url: string;
             };
           };
         };
       };
     };
   };
+}
+
+interface PortfolioMainProps {
+  worksData: WorkDataItem[];
 }
 
 interface PortfolioMainProps {
