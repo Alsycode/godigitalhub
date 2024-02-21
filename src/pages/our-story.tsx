@@ -10,10 +10,10 @@ const OurStory = () => {
   return (
     <Layout header={2} footer={5} video={0}>
       <CmnBanner title="Our Story" navigation="Our Story" />
-      <HomeTwoAward />
+      {/* <HomeTwoAward /> */}
       <OurMission />
       <WorkStepsProject />
-      <OurAchievement />
+      {/* <OurAchievement /> */}
     </Layout>
   );
 };

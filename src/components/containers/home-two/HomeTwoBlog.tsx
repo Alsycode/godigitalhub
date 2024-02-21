@@ -7,28 +7,9 @@ import "swiper/swiper-bundle.css";
 import three from "public/images/blog/three.png";
 import four from "public/images/blog/four.png";
 import five from "public/images/blog/five.png";
-interface BlogData {
-  data: {
-    attributes: {
-      image: {
-        data: {
-          attributes: {
-            formats: {
-              large: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
-      author: string;
-      date: string;
-      title: string;
-      description: string;
-    };
-  }[];
-}
-const HomeTwoBlog = ({ blogsData }: { blogsData: BlogData }) => {
+
+  
+const HomeTwoBlog = ({ blogsData }: { blogsData: any  }) => {
   return (
     <section className="section blog blog-two">
       <div className="container">
@@ -105,7 +86,7 @@ const HomeTwoBlog = ({ blogsData }: { blogsData: BlogData }) => {
          
          
           
-         {blogsData?.data?.map((blog) => (
+         {blogsData?.data?.map((blog: any) => (
            <SwiperSlide>
            <div className="blog-two__slider-single topy-tilt">
              <div className="blog__single-thumb">

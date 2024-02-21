@@ -5,7 +5,7 @@ import ClientFeedbackMain from "@/components/containers/ClientFeedbackMain";
 import { useData } from "@/components/context/dataContext";
 import { DataProvider } from "@/components/context/dataContext";
 const ClientFeedback = () => {
-  const { testimonies }= useData();
+  const { testimonies } = useData();
   console.log("clientfeedback",testimonies)
   return (
     <Layout header={2} footer={5} video={0}>

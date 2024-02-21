@@ -42,7 +42,7 @@ const ServiceMain = () => {
                 }}
               >
               {
-  servicesData.map((service) => (
+  servicesData.map((service: any) => (
     <SwiperSlide key={service.id}> {/* Ensure each slide has a unique key */}
       <div className="service-t-single-wrapper">
         <div className="service-t__slider-single">
@@ -56,7 +56,7 @@ const ServiceMain = () => {
             </h4>
           </div>
           <ul>
-            {service.processes.map((process, index) => ( /* Assuming 'features' is an array in 'service' */
+            {service.processes.map((process: any, index: number) => ( /* Assuming 'features' is an array in 'service' */
               <li key={index}>{process.name}</li> 
             ))}
           </ul>

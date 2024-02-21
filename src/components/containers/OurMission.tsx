@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import one from "public/images/mission/one.png";
-import two from "public/images/mission/two.png";
+import one from "public/images/mission/mission.jpg";
+import two from "public/images/mission/vision.jpg";
 
 const OurMission = () => {
   return (
@@ -17,14 +17,14 @@ const OurMission = () => {
                       mission & vission
                       <i className="fa-solid fa-arrow-right"></i>
                     </span>
-                    <h2 className="title title-anim">our mission & value</h2>
+                    <h2 className="title title-anim">our mission & Vision</h2>
                   </div>
                 </div>
                 <div className="col-12 col-lg-7 col-xxl-5 offset-xxl-2">
                   <div className="text-center text-lg-start">
                     <p>
                       Assembling the team of talented people to enhance your
-                      experience of IT solutions at xpovio.
+                      experience of IT solutions at Go Digital Hub.
                     </p>
                   </div>
                 </div>
@@ -35,11 +35,12 @@ const OurMission = () => {
         <div className="row gaper">
           <div className="col-12 col-lg-6">
             <div className="mission-s__single mission-s__single--alt fade-top">
-              <h3>Quality is Number One</h3>
+              <h3>Mission</h3>
               <div className="section__content-cta">
                 <p className="primary-text">
-                  We define quality as solutions that surpass customer needs on
-                  time and within budget.
+                Fostering Digital Excellence for Sustainable Business Growth, we provide a comprehensive suite of SaaS-based
+solutions and unwavering support. We enable Small and Medium Businesses to harness the full potential of digital
+innovation, achieve sustainable growth, and drive economic prosperity for tomorrow's world.
                 </p>
               </div>
             </div>
@@ -56,11 +57,11 @@ const OurMission = () => {
           </div>
           <div className="col-12 col-lg-6">
             <div className="mission-s__single mission-s__single--alt fade-top">
-              <h3>we Create Customer Value</h3>
+              <h3>Vision</h3>
               <div className="section__content-cta">
                 <p className="primary-text">
-                  We define quality as solutions that surpass customer needs on
-                  time and within budget.
+                To be the Catalyst of Transformation, Accelerating Growth for Small and Medium Businesses through Digital
+Innovation, and Empowering Tomorrow's Enterprises.
                 </p>
               </div>
             </div>
