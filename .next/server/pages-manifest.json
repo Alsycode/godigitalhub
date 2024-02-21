@@ -3,8 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/404": "pages/404.js",
-  "/our-projects": "pages/our-projects.js",
-  "/project-single": "pages/project-single.js",
-  "/about-us": "pages/about-us.js"
+  "/service-single": "pages/service-single.js"
 }
