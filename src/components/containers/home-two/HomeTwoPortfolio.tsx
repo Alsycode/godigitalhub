@@ -150,7 +150,7 @@ const HomeTwoPortfolio= ({ worksData }: { worksData: any }) => {
         </div>
 
         <div className="row masonry-grid">
-           {worksData?.data?.map((work, index) => (
+           {worksData?.data?.map((work: any, index) => (
     <div
       key={index}
       className={`col-12 col-md-6 col-xl-4 filter-item-space grid-item-main ${activeFilter === '.' + work?.attributes?.categories || activeFilter === '*' ? '' : 'hidden'}`}
