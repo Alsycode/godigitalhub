@@ -8,7 +8,7 @@ import HomeTestimonial from "@/components/containers/home/HomeTestimonial";
 import HomeBlog from "@/components/containers/home/HomeBlog";
 import HomeSponsorLight from "@/components/containers/home/HomeSponsorLight";
 import NextPage from "@/components/containers/home/NextPage";
-
+const testimonials = [1,2];
 const HomeLight = () => {
   return (
     <Layout header={1} footer={1} video={true}>
@@ -16,7 +16,7 @@ const HomeLight = () => {
       <Agency />
       <PortfolioText />
       <HomeOffer />
-      <HomeTestimonial />
+      <HomeTestimonial testimonials={testimonials}/>
       <HomeBlog />
       <HomeSponsorLight />
       <NextPage />
