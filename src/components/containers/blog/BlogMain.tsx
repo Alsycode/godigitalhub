@@ -9,28 +9,8 @@ import eleven from "public/images/news/eleven.png";
 import twelve from "public/images/news/twelve.png";
 import thirteen from "public/images/news/thirteen.png";
 import fourteen from "public/images/news/fourteen.png";
-interface BlogData {
-  data: {
-    attributes: {
-      image: {
-        data: {
-          attributes: {
-            formats: {
-              large: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
-      author: string;
-      date: string;
-      title: string;
-      description: string;
-    };
-  }[];
-}
-const BlogMain = ({ blogsData }: { blogsData: BlogData }) => {
+
+const BlogMain = ({ blogsData }: { blogsData: any }) => {
   const latestTwoBlogs = blogsData?.data?.slice(-2);
   console.log("latestTwoBlogs",latestTwoBlogs)
   const [videoActive, setVideoActive] = useState(false);
@@ -41,7 +21,7 @@ const BlogMain = ({ blogsData }: { blogsData: BlogData }) => {
           <div className="row gaper">
             <div className="col-12 col-xl-8">
               <div className="blog-main__content">
-              {latestTwoBlogs?.map((blog, index) => (
+              {latestTwoBlogs?.map((blog: any, index: number) => (
 
                 <div className="blog-main__single fade-top">
                   <div className="thumb">

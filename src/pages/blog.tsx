@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout";
 import CmnBanner from "@/components/layout/banner/CmnBanner";
 import BlogMain from "@/components/containers/blog/BlogMain";
 
-const BlogPage = ({ blogsData }) => {
+const BlogPage = ({ blogsData }: { blogsData: any }) => {
   console.log("blogs",blogsData)
   return (
     <Layout header={2} footer={5} video={0}>
