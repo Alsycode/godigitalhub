@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <DataProvider>
     <Layout header={2} footer={2} video={true}>
-  <HomeTwoBanner data={data}/>
+  <HomeTwoBanner />
       <AboutSponsor />
       <HomeTwoAward />
       <HomeTwoOffer />

@@ -6,8 +6,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import dawn from "public/images/banner/dawn.png";
 
 gsap.registerPlugin(ScrollTrigger);
-const HomeTwoBanner = ({data}) => {
-  console.log("LLLLLLLLLL",data)
+const HomeTwoBanner = () => {
+
   useEffect(() => {
     const device_width = window.innerWidth;
 
