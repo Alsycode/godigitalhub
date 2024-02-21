@@ -9,8 +9,28 @@ import eleven from "public/images/news/eleven.png";
 import twelve from "public/images/news/twelve.png";
 import thirteen from "public/images/news/thirteen.png";
 import fourteen from "public/images/news/fourteen.png";
-
-const BlogMain = ({blogsData}) => {
+interface BlogData {
+  data: {
+    attributes: {
+      image: {
+        data: {
+          attributes: {
+            formats: {
+              large: {
+                url: string;
+              };
+            };
+          };
+        };
+      };
+      author: string;
+      date: string;
+      title: string;
+      description: string;
+    };
+  }[];
+}
+const BlogMain = ({ blogsData }: { blogsData: BlogData }) => {
   const latestTwoBlogs = blogsData?.data?.slice(-2);
   console.log("latestTwoBlogs",latestTwoBlogs)
   const [videoActive, setVideoActive] = useState(false);
