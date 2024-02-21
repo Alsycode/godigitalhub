@@ -14,7 +14,7 @@ import HomeTwoCta from "@/components/containers/home-two/HomeTwoCta";
 const HomeTwoLight = () => {
   return (
     <Layout header={2} footer={2} video={true}>
-      <HomeTwoLightBanner />
+      {/* <HomeTwoLightBanner />
       <HomeTwoSponsorLight />
       <HomeTwoAward />
       <HomeTwoOfferLight />
@@ -23,7 +23,7 @@ const HomeTwoLight = () => {
       <HomeTwoTestimonial />
       <HomeTwoBlogLight />
       <HomeTwoCta />
-      <NextPage />
+      <NextPage /> */}
     </Layout>
   );
 };

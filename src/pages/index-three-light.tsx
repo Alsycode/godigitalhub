@@ -14,7 +14,7 @@ import NextPageLight from "@/components/containers/home/NextPageLight";
 const HomeThree = () => {
   return (
     <Layout header={3} footer={3} video={true}>
-      <HomeThreeBanner />
+      {/* <HomeThreeBanner />
       <HomeThreeServicesLight />
       <HomeThreeAgency />
       <HomeThreePortfolio />
@@ -23,7 +23,7 @@ const HomeThree = () => {
       <HomeThreeSponsor />
       <HomeThreeBlogLight />
       <CtaThree />
-      <NextPageLight />
+      <NextPageLight /> */}
     </Layout>
   );
 };

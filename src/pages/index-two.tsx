@@ -14,7 +14,7 @@ import AboutSponsor from "@/components/containers/home-three/AboutSponsor";
 const HomeTwo = () => {
   return (
     <Layout header={2} footer={2} video={true}>
-      <HomeTwoBanner />
+      {/* <HomeTwoBanner />
       <AboutSponsor />
       <HomeTwoAward />
       <HomeTwoOffer />
@@ -23,7 +23,7 @@ const HomeTwo = () => {
       <HomeTwoTestimonial />
       <HomeTwoBlog />
       <HomeTwoCta />
-      <NextPageNull />
+      <NextPageNull /> */}
     </Layout>
   );
 };

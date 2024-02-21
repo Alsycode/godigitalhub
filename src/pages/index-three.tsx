@@ -14,7 +14,7 @@ import NextPage from "@/components/containers/home/NextPage";
 const HomeThree = () => {
   return (
     <Layout header={3} footer={3} video={true}>
-      <HomeThreeBanner />
+      {/* <HomeThreeBanner />
       <HomeThreeServices />
       <HomeThreeAgency />
       <HomeThreePortfolio />
@@ -23,7 +23,7 @@ const HomeThree = () => {
       <HomeThreeSponsor />
       <HomeThreeBlog />
       <CtaThree />
-      <NextPage />
+      <NextPage /> */}
     </Layout>
   );
 };

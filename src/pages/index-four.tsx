@@ -8,10 +8,10 @@ import HomeFourProject from "@/components/containers/home-four/HomeFourProject";
 const HomeFour = () => {
   return (
     <Layout header={4} footer={4} video={true}>
-      <HomeFourBanner />
+      {/* <HomeFourBanner />
       <Info />
       <ProjectSlider />
-      <HomeFourProject />
+      <HomeFourProject /> */}
     </Layout>
   );
 };
