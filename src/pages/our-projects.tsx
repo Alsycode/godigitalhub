@@ -6,8 +6,11 @@ import CmnBanner from "@/components/layout/banner/CmnBanner";
 import ProjectMain from "@/components/containers/project/ProjectMain";
 import WorkStepsProject from "@/components/containers/project/WorkStepsProject";
 import CtaTwo from "@/components/containers/service-details/CtaTwo";
+interface OurProjectsProps {
+  projectsData: any; // Change `any` to the actual type of `projectsData`
+}
 
-const OurProjects = ({ projectsData }) => {
+const OurProjects = ({ projectsData }: OurProjectsProps) => {
   console.log("Server-side projects data:", projectsData); // Log server-side projects data
 
   return (

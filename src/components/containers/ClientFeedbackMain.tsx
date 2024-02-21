@@ -1,13 +1,37 @@
 import React from "react";
 import Image from "next/image";
 import avatar from "public/images/testimonial/avatar.png";
+interface Testimony {
+  attributes: {
+    text: string;
+    image: {
+      data: {
+        attributes: {
+          formats: {
+            thumbnail: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    name: string;
+    designation: string;
+  };
+}
 
-const ClientFeedbackMain = ({testimonies}) => {
+interface Props {
+  testimonies: {
+    data: Testimony[];
+  };
+}
+
+const ClientFeedbackMain: React.FC<Props> = ({ testimonies }) => {
   return (
     <section className="section feedback-s fade-wrapper">
-    <div className="container">
-      <div className="row gaper">
-        {testimonies?.data?.map((testimony, index) => (
+      <div className="container">
+        <div className="row gaper">
+          {testimonies?.data?.map((testimony, index) => (
           <div key={index} className="col-12 col-md-6 col-xl-4">
             <div className="feedback-s__single topy-tilt fade-top">
               <div className="content">

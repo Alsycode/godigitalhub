@@ -5,13 +5,18 @@ import ProjectDetailsMain from "@/components/containers/project/ProjectDetailsMa
 import UxProcess from "@/components/containers/service-details/UxProcess";
 import { useRouter } from "next/router";
 
-const ProjectDetails = ({ projectDetailsData }) => {
+interface ProjectDetailsProps {
+  projectDetailsData: any; // Change `any` to the actual type of `projectDetailsData`
+}
+
+const ProjectDetails = ({ projectDetailsData }: ProjectDetailsProps) => {
   const router = useRouter();
-const { slug } = router.query;
-const matchedProject = projectDetailsData?.data?.find(
-  (project) => project.slug === slug
-);
-console.log("matchh",matchedProject)
+  const { slug } = router.query;
+  const matchedProject = projectDetailsData?.data?.find(
+    (project: any) => project.slug === slug
+  );
+  console.log("matchh", matchedProject);
+
   // Render the project details if available
   if (!projectDetailsData) {
     return (

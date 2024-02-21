@@ -9,7 +9,32 @@ import star from "public/images/testimonial/star.png";
 import thumb from "public/images/happyclient.jpg";
 import avatar from "public/images/testimonial/avatar.png";
 gsap.registerPlugin(ScrollTrigger);
-const HomeTwoTestimonial = ({testimonials}) => {
+interface Testimonial {
+  attributes: {
+    image: {
+      data: {
+        attributes: {
+          formats: {
+            small: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    text: string;
+    name: string;
+    designation: string;
+  };
+}
+
+interface Props {
+  testimonials: {
+    data: Testimonial[];
+  };
+}
+
+const HomeTwoTestimonial: React.FC<Props> = ({ testimonials }) => {
   console.log("testimonyccheck",testimonials)
   useEffect(() => {
     const device_width = window.innerWidth;
@@ -73,22 +98,22 @@ const HomeTwoTestimonial = ({testimonials}) => {
                   }}
                   className="testimonial-two__slider"
                 >
-                  {testimonials?.data?.map((testimony, index) => (
+                  {testimonials?.data?.map((testimonial: Testimonial, index) => (
   <SwiperSlide key={index}> {/* Assigning unique key */}
     <div className="testimonial-two__slider-single">
       <div className="paragraph">
         <blockquote className="secondary-text">
           <q>
-            {testimony.attributes.text}
+            {testimonial.attributes.text}
           </q>
         </blockquote>
       </div>
       <div className="author-meta">
         <div className="author-meta__thumb">
-          <Image src={testimony.attributes.image.data.attributes.formats.small.url} width={76} height={80} alt="Image" />
+          <Image src={testimonial.attributes.image.data.attributes.formats.small.url} width={76} height={80} alt="Image" />
         </div>
         <div className="author-meta__content">
-          <h5>{testimony.attributes.name}</h5>
+          <h5>{testimonial.attributes.name}</h5>
           <p>From UK</p>
         </div>
       </div>

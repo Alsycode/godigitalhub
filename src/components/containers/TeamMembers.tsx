@@ -12,7 +12,21 @@ import five from "public/images/teams/five.png";
 import six from "public/images/teams/six.png";
 import seven from "public/images/teams/seven.png";
 
-const TeamMembers = ({teamMembers}) => {
+interface SocialLinks {
+  facebook: string;
+  twitter: string;
+  linkedin: string;
+}
+
+interface TeamMember {
+  name: string;
+  role: string;
+  description: string;
+  socialLinks: SocialLinks;
+  imageSrc: string;
+  slug: string;
+}
+const TeamMembers: React.FC<{ teamMembers: TeamMember[] }> = ({ teamMembers }) => {
   console.log("team",teamMembers);
   return (
     <section className="section team-slider-s">

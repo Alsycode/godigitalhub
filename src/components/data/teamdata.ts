@@ -1,3 +1,21 @@
+interface SocialLinks {
+  facebook: string;
+  twitter: string;
+  linkedin: string;
+}
+
+// Define type for each team member
+interface TeamMember {
+  name: string;
+  role: string;
+  description: string;
+  socialLinks: SocialLinks;
+  imageSrc: string;
+  slug: string;
+}
+
+
+
 const teamMembers = [
     {
       name: "Sudheer P S",

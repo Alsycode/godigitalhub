@@ -7,8 +7,32 @@ import "swiper/swiper-bundle.css";
 import sthumb from "public/images/testimonial/s-thumb.png";
 import sthumbtwo from "public/images/testimonial/s-thumb-two.png";
 import sthumbthree from "public/images/testimonial/s-thumb-three.png";
+interface Testimonial {
+  attributes: {
+    image: {
+      data: {
+        attributes: {
+          formats: {
+            small: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    text: string;
+    name: string;
+    designation: string;
+  };
+}
 
-const HomeTestimonial = ({testimonials}) => {
+interface Props {
+  testimonials: {
+    data: Testimonial[];
+  };
+}
+
+const HomeTestimonial: React.FC<Props> = ({ testimonials }) => {
   const [nextSlideIndex, setNextSlideIndex] = useState<number>(1);
 
   const handleSlideChange = (swiper: any) => {

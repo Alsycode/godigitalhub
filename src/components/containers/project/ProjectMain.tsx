@@ -14,7 +14,7 @@ import hrseven from "public/images/projectlist/svjs.png";
 import hreight from "public/images/projectlist/londonmumbai.png";
 import { useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
-const ProjectMain = ({projectsData}) => {
+const ProjectMain = ({ projectsData }: { projectsData: any }) => {
   //  const {name, slug, into, specifics} = projectsData.data[0];
    const [data,setData] = useState([]);
   
@@ -66,7 +66,7 @@ const ProjectMain = ({projectsData}) => {
 
   return (
     <section className="section project-sl" ref={slider}>
- {projects?.map((project, index) => (
+ {projects?.map((project: any, index: number) => (
     <div className="project-sl__single" key={index}>
       <div className="thumb">
         <Link href={{ pathname: "/project-single", query: { slug: project?.attributes?.slug } }}>

@@ -13,13 +13,40 @@ import dthree from "public/images/projects/d-three.png";
 import dfour from "public/images/projects/d-four.png";
 import dfive from "public/images/projects/d-five.png";
 
-const ProjectDetailsMain = ({projectDetailsData}) => {
-console.log("projectDetailsData",projectDetailsData)
-const project = projectDetailsData.data;
-const specifics = project[0]?.attributes?.specifics;
- const description = project[0]?.attributes?.description[0]?.children[0]?.text;
- console.log("description",description)  
-console.log("project",project) 
+interface ProjectDetailsData {
+  data: {
+    attributes: {
+      name: string;
+      introduction: string;
+      specifics: {
+        children: {
+          children: {
+            text: string;
+          }[];
+        }[];
+      }[];
+      description: {
+        children: {
+          text: any;
+          children: {
+            text: string;
+          }[];
+        }[];
+      }[];
+      sector: string;
+      owner: string;
+      projectdates: string;
+    };
+  }[];
+}
+
+const ProjectDetailsMain: React.FC<{ projectDetailsData: ProjectDetailsData }> = ({ projectDetailsData }) => {
+  console.log("projectDetailsData", projectDetailsData);
+  const project = projectDetailsData.data;
+  const specifics = project[0]?.attributes?.specifics;
+  const description = project[0]?.attributes?.description[0]?.children[0]?.text;
+  console.log("description", description);
+  console.log("project", project);
 return (
     <section className="section project-d">
       <div className="container">
@@ -37,8 +64,8 @@ return (
               <h3 className="light-title-lg">Project Includes</h3>
              
               <ul>
-                {specifics[1]?.children?.map((item) => (
-                  <li>{item?.children[0]?.text}</li>
+              {specifics[1]?.children?.map((item) => (
+    <li>{item?.children[0]?.text}</li>
                 ))}
           
               </ul>

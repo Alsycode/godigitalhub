@@ -10,10 +10,13 @@ import CustomCursor from "./CustomCursor";
 import SplitType from "split-type";
 import Indextwo from "../../pages/index-two"
 type LayoutProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  header: number;
+  footer: number;
+  video: any;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children ,header, footer, video }: LayoutProps) => {
   // Navbar
   const [openNav, setOpenNav] = useState(false);
   const handleNav = () => {
@@ -31,9 +34,9 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <Fragment>
-      <Head>
-        {/* Your Head content */}
-      </Head>
+      {/* <Head>
+    
+      </Head> */}
       <div className="my-app">
         <HeaderTwo
           openNav={openNav}
@@ -45,7 +48,8 @@ const Layout = ({ children }: LayoutProps) => {
         
         </main>
         <FooterTwo />
-        <CustomCursor />
+        <CustomCursor  onTitleMouseEnter={() => {}}
+  onTitleMouseLeave={() => {}} />
       </div>
     </Fragment>
   );

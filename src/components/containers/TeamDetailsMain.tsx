@@ -3,14 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import one from "public/images/teams/one.png";
 import teamMembers from "../data/teamdata";
 import { useRouter } from "next/router";
+import { Url } from "url";
+
 gsap.registerPlugin(ScrollTrigger);
+
 const TeamDetailsMain = () => {
   const router = useRouter();
   const { slug } = router.query;
-  console.log("slug",slug)
+  console.log("slug", slug);
+
   useEffect(() => {
     const percentElements = document.querySelectorAll("[data-percent]");
 
@@ -73,8 +76,12 @@ const TeamDetailsMain = () => {
       }
     });
   }, []);
+
   const teamMember = teamMembers.find((member) => member.slug === slug);
-  const { name, role, description, socialLinks, imageSrc } = teamMember;
+  const { name, role, description, imageSrc, socialLinks } = teamMember || {};
+
+  // Ensure that socialLinks is always defined before accessing its properties
+  const socialLinksTyped: { facebook?: Url | string, twitter?: Url | string, linkedin?: Url | string } = socialLinks || {};
 
   return (
     <section className="section pb-0 team-det fade-wrapper">
@@ -82,17 +89,17 @@ const TeamDetailsMain = () => {
         <div className="row gaper">
           <div className="col-12 col-lg-5 col-xxl-4">
             <div className="team-det__thumb fade-top">
-            <Image  src={require(`public/images/team/${imageSrc}`).default} alt="Image" /> 
+              <Image src={require(`public/images/team/${imageSrc}`).default} alt="Image" />
               <div className="social-alt">
-                <Link href={socialLinks.facebook} target="_blank" aria-label="share us on facebook">
+                {/* <Link href={socialLinksTyped.facebook} target="_blank" aria-label="share us on facebook">
                   <i className="fa-brands fa-facebook-f"></i>
                 </Link>
-                <Link href={socialLinks.twitter} target="_blank" aria-label="share us on twitter">
+                <Link href={socialLinksTyped.twitter} target="_blank" aria-label="share us on twitter">
                   <i className="fa-brands fa-twitter"></i>
                 </Link>
-                <Link href={socialLinks.linkedin} target="_blank" aria-label="share us on pinterest">
+                <Link href={socialLinksTyped.linkedin} target="_blank" aria-label="share us on pinterest">
                   <i className="fa-brands fa-linkedin-in"></i>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -114,12 +121,11 @@ const TeamDetailsMain = () => {
                 <h5>About Me</h5>
                 <p>{description}</p>
               </div>
-            
             </div>
           </div>
         </div>
       </div>
-  </section>
+    </section>
   );
 };
 
