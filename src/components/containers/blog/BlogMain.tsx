@@ -147,7 +147,7 @@ const BlogMain = ({ blogsData }: { blogsData: any }) => {
                     <h5 className="h5">Recent Posts</h5>
                   </div>
                   <div className="widget__latest">
-                  {blogsData?.data?.map((blog, index) => (
+                  {blogsData?.data?.map((blog: any, index: number) => (
                  
                      <div className="latest-single ">
                        <div className="latest-thumb">
