@@ -9,32 +9,9 @@ import star from "public/images/testimonial/star.png";
 import thumb from "public/images/happyclient.jpg";
 import avatar from "public/images/testimonial/avatar.png";
 gsap.registerPlugin(ScrollTrigger);
-interface Testimonial {
-  attributes: {
-    image: {
-      data: {
-        attributes: {
-          formats: {
-            small: {
-              url: string;
-            };
-          };
-        };
-      };
-    };
-    text: string;
-    name: string;
-    designation: string;
-  };
-}
 
-interface Props {
-  testimonials: {
-    data: Testimonial[];
-  };
-}
 
-const HomeTwoTestimonial: React.FC<Props> = ({ testimonials }) => {
+const HomeTwoTestimonial =  ({ testimonials }: { testimonials: any })  => {
   console.log("testimonyccheck",testimonials)
   useEffect(() => {
     const device_width = window.innerWidth;
@@ -98,7 +75,7 @@ const HomeTwoTestimonial: React.FC<Props> = ({ testimonials }) => {
                   }}
                   className="testimonial-two__slider"
                 >
-                  {testimonials?.data?.map((testimonial: Testimonial, index) => (
+                  {testimonials?.data?.map((testimonial: any, index: number) => (
   <SwiperSlide key={index}> {/* Assigning unique key */}
     <div className="testimonial-two__slider-single">
       <div className="paragraph">
