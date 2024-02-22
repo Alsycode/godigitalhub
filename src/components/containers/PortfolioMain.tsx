@@ -52,12 +52,12 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>{firstItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>{firstItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -71,7 +71,7 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
@@ -90,7 +90,7 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
@@ -109,7 +109,7 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: fourthItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
@@ -128,7 +128,7 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: fifthItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
@@ -147,7 +147,7 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: fifthItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
@@ -166,12 +166,12 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>{firstItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{firstItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -185,7 +185,7 @@ console.log("firstItem",firstItem)
               </div>
               <div className="content">
                 <div className="tr">
-                  <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>
                     <i className="icon-arrow-top-right"></i>
                   </Link>
                 </div>
