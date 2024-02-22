@@ -46,7 +46,7 @@ console.log("firstItem",firstItem)
           <div className="col-12 col-lg-6">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>
+                <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>
                   <Image src={firstItem.image} width={690} height={706} alt="Image" />
                 </Link>
               </div>
@@ -57,7 +57,7 @@ console.log("firstItem",firstItem)
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>{firstItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>{firstItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -95,7 +95,7 @@ console.log("firstItem",firstItem)
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{thirdItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>{thirdItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -114,7 +114,7 @@ console.log("firstItem",firstItem)
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{fourthItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: fourthItem.slug } }}>{fourthItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -133,7 +133,7 @@ console.log("firstItem",firstItem)
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{fifthItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: fifthItem.slug } }}>{fifthItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -152,7 +152,7 @@ console.log("firstItem",firstItem)
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{fifthItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: fifthItem.slug } }}>{fifthItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -171,7 +171,7 @@ console.log("firstItem",firstItem)
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{firstItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>{firstItem.title}</Link>
                 </h3>
               </div>
             </div>
