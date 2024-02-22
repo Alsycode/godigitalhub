@@ -3,8 +3,8 @@ const servicesData = [
     id: 1,
     slug: "digital-marketing",
     name: "DIGITAL MARKETING",
-    image:"digitalmarketing",
-    image2:"digitalmarketing2",
+    image:"digitalmarketing.jpg",
+    image2:"digitalmarketing2.jpg",
     why: "Digital marketing is crucial for businesses to reach and engage with their target audience effectively in the digital space. It helps increase brand visibility, drive website traffic, generate leads, and ultimately boost sales and revenue.",
     approach: "Our approach to digital marketing involves a strategic blend of various online marketing techniques tailored to meet the unique goals and needs of each client. From comprehensive market research and targeted audience analysis to innovative campaign planning and execution, we aim to deliver measurable results and maximize ROI.",
     processes: [
@@ -26,8 +26,8 @@ const servicesData = [
     id: 2,
     slug: "web-development",
     name: "WEB DEVELOPMENT",
-    image:"webdev",
-    image2:"webdev2",
+    image:"webdev.jpg",
+    image2:"webdev2.jpg",
     why: "Web development plays a crucial role in building and maintaining an online presence for businesses. It involves creating user-friendly websites and web applications that offer seamless experiences to visitors, thereby enhancing brand credibility, driving conversions, and facilitating business growth.",
     approach: "Our approach to web development focuses on creating custom solutions that align with the unique objectives and requirements of each client. From intuitive UI/UX design and responsive frontend development to robust backend architecture and seamless integrations, we strive to deliver scalable, secure, and high-performance web solutions.",
     processes: [
@@ -49,8 +49,8 @@ const servicesData = [
     id: 3,
     slug: "whatsapp-cloud-api",
     name: "WhatsApp Cloud API",
-    image:"whatsapp",
-    image2:"whatsapp2",
+    image:"whatsapp.jpg",
+    image2:"whatsapp2.jpg",
     why: "With the widespread use of messaging apps like WhatsApp for business communication, leveraging the WhatsApp Cloud API enables organizations to streamline customer engagement, automate workflows, and deliver personalized messaging experiences at scale. It offers seamless integration with existing systems, real-time communication capabilities, and enhanced security features.",
     approach: "Our approach to implementing the WhatsApp Cloud API involves understanding client requirements, designing tailored solutions, and seamlessly integrating the API with existing systems and workflows. We prioritize security, scalability, and performance to ensure reliable messaging experiences and drive meaningful business outcomes.",
     processes: [
@@ -76,8 +76,8 @@ const servicesData = [
     id: 4,
     slug: "search-engine-optimization",
     name: "Search Engine Optimization (SEO)",
-    image:"seo",
-    image2:"seo2",
+    image:"seo.jpg",
+    image2:"seo2.jpg",
     why: "Search Engine Optimization (SEO) is used to increase the visibility and ranking of a website on search engine results pages (SERPs). It helps drive organic traffic, improve online presence, and enhance brand credibility by optimizing various aspects of the website to align with search engine algorithms and user intent.",
     approach: "Our approach to Search Engine Optimization (SEO) involves comprehensive keyword research, on-page and off-page optimization techniques, and continuous monitoring and analysis of website performance metrics. We focus on understanding client objectives, tailoring strategies to target audience needs, and adapting to algorithm changes to ensure sustained growth in organic traffic and improved search engine rankings.",
     processes: [

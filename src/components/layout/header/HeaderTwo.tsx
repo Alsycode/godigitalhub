@@ -126,9 +126,9 @@ const HeaderTwo = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                           <li>
                             <Link href="our-services">Our Services</Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link href="service-single">Service Details</Link>
-                          </li>
+                          </li> */}
                         </ul>
                       </li>
                       <li className="navbar__item navbar__item--has-children nav-fade">
@@ -142,9 +142,9 @@ const HeaderTwo = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                           <li>
                             <Link href="our-projects">Our Projects</Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link href="project-single">Project Details</Link>
-                          </li>
+                          </li> */}
                         </ul>
                       </li>
                       <li className="navbar__item navbar__item--has-children nav-fade">
@@ -178,9 +178,9 @@ const HeaderTwo = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                               <li>
                                 <Link href="our-teams">Our Teams</Link>
                               </li>
-                              <li>
+                              {/* <li>
                                 <Link href="team-single">Team Details</Link>
-                              </li>
+                              </li> */}
                             </ul>
                           </li>
                           <li>
@@ -202,9 +202,9 @@ const HeaderTwo = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                           <li>
                             <Link href="blog">Blog</Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link href="blog-single">Blog Details</Link>
-                          </li>
+                          </li> */}
                         </ul>
                       </li>
                     </ul>

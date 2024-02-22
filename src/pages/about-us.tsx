@@ -17,7 +17,7 @@ const testimonials = data?.testimonies;
   return (
     <Layout header={2} footer={5} video={0}>
       <CmnBanner title="About Us" navigation="About Us" />
-      <HomeTwoModal />
+      {/* <HomeTwoModal /> */}
       <Agency />
       <TeamMembers teamMembers={teamMembers} />
       <HomeTestimonial testimonials={testimonials}/>

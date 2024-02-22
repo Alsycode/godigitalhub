@@ -223,81 +223,15 @@ return (
           }}
           className="project-d__slider"
         >
-          <SwiperSlide>
+          {project?.attributes?.carousal?.data?.map((image: any) => (
+            <SwiperSlide>
             <div className="project-d__slider-single">
-              <Image src={done} alt="Image" />
+            <Image src={image?.attributes?.formats?.large?.url} width={450} height={350} alt="Image" />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dtwo} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dthree} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dfour} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dfive} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={done} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dtwo} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dthree} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dfour} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dfive} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={done} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dtwo} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dthree} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dfour} alt="Image" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="project-d__slider-single">
-              <Image src={dfive} alt="Image" />
-            </div>
-          </SwiperSlide>
+          ))}
+          
+        
         </Swiper>
       </div>
     </section>

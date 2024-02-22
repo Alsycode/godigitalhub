@@ -7,7 +7,7 @@ const BlogPage = ({ blogsData }: { blogsData: any }) => {
   console.log("blogs",blogsData)
   return (
     <Layout header={2} footer={5} video={0}>
-      <CmnBanner title="Blog Standard" navigation="Blog Standard" />
+      <CmnBanner title="Our Blogs" navigation="Blogs" />
       <BlogMain blogsData={blogsData} />
     </Layout>
   );

@@ -36,7 +36,7 @@ const ProjectDetails = () => {
         parentLink="our-projects"
       />
       <ProjectDetailsMain matchedProject={matchedProject} />
-      <UxProcess />
+      {/* <UxProcess /> */}
     </Layout>
   );
 };
