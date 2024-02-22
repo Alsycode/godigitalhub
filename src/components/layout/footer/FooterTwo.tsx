@@ -149,11 +149,11 @@ const FooterTwo = () => {
           <div className="col-12 col-lg-7 col-xl-7 offset-xl-1 col-xxl-5 offset-xxl-3">
             <div className="footer-two__right">
               <div className="social justify-content-start justify-content-lg-start">
-                <Link href="https://www.facebook.com/" target="_blank">
+                <Link href="https://www.facebook.com/godigitalgrowonline" target="_blank">
                   <i className="fa-brands fa-facebook-f"></i>
                   <span>Facebook</span>
                 </Link>
-                <Link href="https://www.twitter.com/" target="_blank">
+                <Link href="https://twitter.com/godigitalhub" target="_blank">
                   <i className="fa-brands fa-twitter"></i>
                   <span>Twitter</span>
                 </Link>
@@ -161,7 +161,7 @@ const FooterTwo = () => {
                   <i className="fa-brands fa-linkedin-in"></i>
                   <span>Linkedin</span>
                 </Link> */}
-                <Link href="https://www.instagram.com/" target="_blank">
+                <Link href="https://www.instagram.com/godigital_hub/" target="_blank">
                   <i className="fa-brands fa-instagram"></i>
                   <span>Instagram</span>
                 </Link>

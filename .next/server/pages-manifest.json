@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/portfolio": "pages/portfolio.js",
-  "/service-single": "pages/service-single.js",
-  "/project-single": "pages/project-single.js"
+  "/contact-us": "pages/contact-us.js",
+  "/": "pages/index.js",
+  "/client-feedback": "pages/client-feedback.js"
 }

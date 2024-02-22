@@ -9,8 +9,23 @@ import eleven from "public/images/news/eleven.png";
 import twelve from "public/images/news/twelve.png";
 import thirteen from "public/images/news/thirteen.png";
 import fourteen from "public/images/news/fourteen.png";
-
+import { useData } from "@/components/context/dataContext";
+import { useRouter } from "next/router";
 const BlogDetailsMain = () => {
+  const data = useData();
+  const blogData = data?.blogs;
+  const router = useRouter();
+  const { slug } = router.query;
+  console.log("blogData",slug)
+  const matchedblog = blogData?.data?.find(
+    (blog: any) => blog?.attributes?.slug === slug
+  );
+  console.log("matchedblog",matchedblog)
+ const date = matchedblog?.attributes.date;
+ const image = matchedblog?.attributes?.image?.data?.attributes?.formats?.large?.url;
+ const Author = matchedblog?.attributes.author;
+ const title = matchedblog?.attributes?.title;
+ console.log("image",image)
   return (
     <section className="section blog-main blog-details fade-wrapper">
       <div className="container">
@@ -18,22 +33,22 @@ const BlogDetailsMain = () => {
           <div className="col-12 col-xl-8">
             <div className="blog-details__content">
               <div className="bd-thumb fade-top">
-                <Image src={poster} alt="Image" />
+                <Image src={image} width={929} height={420} alt="Image" />
               </div>
               <div className="bd-content">
                 <div className="bd-meta">
                   <div className="meta__left">
                     <p>
                       <strong>Written by :</strong>
-                      Marry biden
+                     
                     </p>
                     <span></span>
-                    <p>10/01/2023</p>
+                    <p>{Author}</p>
                   </div>
                 </div>
                 <div className="bd-content-info">
                   <h4 className="h4">
-                    Guide dog shortage: The blind people who train their
+                  {title}
                   </h4>
                   <div className="paragraph">
                     <p>
@@ -46,7 +61,7 @@ const BlogDetailsMain = () => {
                       volutpat ultrices, metus dolor dictum enim, sed convallis
                       lacus urna nec erat.
                     </p>
-                    <p>
+                    {/* <p>
                       consectetur adipiscing elit. Etiam at mauris accumsan mi
                       pulvinar lacinia a in justo. Ut tempor et libero quis
                       dignissim. Nulla at convallis libero, vitae aliquam leo.
@@ -54,9 +69,9 @@ const BlogDetailsMain = () => {
                       auctor elit facilisis. Mauris dapibus massa rhoncus ligula
                       luctus vulputate. Fusce condimentum placerat vulputate.
                       Praesent ullamcorper dui in dui sagittis commodo.
-                    </p>
+                    </p> */}
                   </div>
-                  <h4 className="h4">Where can I get some?</h4>
+                  {/* <h4 className="h4">Where can I get some?</h4> */}
                 </div>
               </div>
               <div className="bd-group">
@@ -64,7 +79,7 @@ const BlogDetailsMain = () => {
                 <Image src={grouptwo} alt="Image" className="fade-top" />
               </div>
               <div className="bd-content ">
-                <div className="bd-content__alt">
+                {/* <div className="bd-content__alt">
                   <p>
                     Proin ultricies ultricies est vitae cursus. Nulla sit amet
                     suscipit tortor. Maecenas dui erat, ornare eget tristique
@@ -85,19 +100,19 @@ const BlogDetailsMain = () => {
                     <li>Quisque blandit lacus vel urna pellentesque mattis.</li>
                     <li>Maecenas vehicula tortor et consectetur faucibus.</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
               <div className="bd-quote">
-                <blockquote>
+                {/* <blockquote>
                   <q className="light-title-lg">
                     Neque porro quisquam est qui dolorem ipsum quia dolor sit
                     amet, consectetur, adipisci velit...
                   </q>
-                </blockquote>
+                </blockquote> */}
               </div>
               <div className="bd-content">
                 <div className="bd-content__alt mt-0">
-                  <p>
+                  {/* <p>
                     Proin ultricies ultricies est vitae cursus. Nulla sit amet
                     suscipit tortor. Maecenas dui erat, ornare eget tristique
                     vitae, rutrum pretium justo. Phasellus vitae consequat nisi,
@@ -106,7 +121,7 @@ const BlogDetailsMain = () => {
                     condimentum velit. Phasellus aliquet, leo auctor volutpat
                     ultrices, metus dolor dictum enim, sed convallis lacus urna
                     nec erat.
-                  </p>
+                  </p> */}
                 </div>
               </div>
               <div className="bd-tags">
@@ -292,70 +307,32 @@ const BlogDetailsMain = () => {
                   <h5 className="h5">Recent Posts</h5>
                 </div>
                 <div className="widget__latest">
-                  <div className="latest-single ">
-                    <div className="latest-thumb">
-                      <Link href="blog-single">
-                        <Image src={ten} alt="Image" />
-                      </Link>
-                    </div>
-                    <div className="latest-content">
-                      <p>10/01/2023</p>
-                      <p>
-                        <Link href="blog-single">
-                          Guide dog shortage: The blind peo ple who train their
-                          own guide
-                        </Link>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="latest-single ">
-                    <div className="latest-thumb">
-                      <Link href="blog-single">
-                        <Image src={eleven} alt="Image" />
-                      </Link>
-                    </div>
-                    <div className="latest-content">
-                      <p>10/01/2023</p>
-                      <p>
-                        <Link href="blog-single">
-                          Guide dog shortage: The blind peo ple who train their
-                          own guide
-                        </Link>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="latest-single ">
-                    <div className="latest-thumb">
-                      <Link href="blog-single">
-                        <Image src={twelve} alt="Image" />
-                      </Link>
-                    </div>
-                    <div className="latest-content">
-                      <p>10/01/2023</p>
-                      <p>
-                        <Link href="blog-single">
-                          Guide dog shortage: The blind peo ple who train their
-                          own guide
-                        </Link>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="latest-single ">
-                    <div className="latest-thumb">
-                      <Link href="blog-single">
-                        <Image src={thirteen} alt="Image" />
-                      </Link>
-                    </div>
-                    <div className="latest-content">
-                      <p>10/01/2023</p>
-                      <p>
-                        <Link href="blog-single">
-                          Guide dog shortage: The blind peo ple who train their
-                          own guide
-                        </Link>
-                      </p>
-                    </div>
-                  </div>
+                  
+                 
+                 {blogData?.data.map((blog: any) => (
+                     <div className="latest-single ">
+                     <div className="latest-thumb">
+                       
+                       <Link href="blog-single">
+                         <Image src={blog?.attributes?.image?.data?.attributes?.formats?.thumbnail?.url} width={76} height={80} alt="Image" />
+                       </Link>
+                     
+                     </div>
+                     
+                     <div className="latest-content">
+                       <p>{blog?.attributes?.date}</p>
+                       <p>
+                         <Link href="blog-single">
+                           {blog?.attributes?.title}
+                         </Link>
+                       </p>
+                     
+                     </div>
+                     </div>
+                 ))}
+               
+
+                 
                 </div>
               </div>
               <div className="widget">
@@ -402,7 +379,7 @@ const BlogDetailsMain = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </section>
   );
 };

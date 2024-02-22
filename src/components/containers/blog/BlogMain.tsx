@@ -26,7 +26,7 @@ const BlogMain = ({ blogsData }: { blogsData: any }) => {
                 <div className="blog-main__single fade-top">
                   <div className="thumb">
                     <div className="thumb-link ">
-                      <Link href="blog-single">
+                    <Link href={{ pathname: "/blog-single", query: { slug: blog?.attributes?.slug } }}>  
                         <Image src={blog.attributes.image.data.attributes.formats.large.url} width={690} height={550} alt="Image" />
                       </Link>
                     </div>
@@ -47,7 +47,7 @@ const BlogMain = ({ blogsData }: { blogsData: any }) => {
                   </div>
                   <div className="content ">
                     <h4 className="h4">
-                      <Link href="blog-single">
+                    <Link href={{ pathname: "/blog-single", query: { slug: blog?.attributes?.slug } }}>  
                       {blog.attributes.title}
                       </Link>
                     </h4>
@@ -60,7 +60,7 @@ const BlogMain = ({ blogsData }: { blogsData: any }) => {
 
                     </p>
                     <div className="cta">
-                      <Link href="blog-single">
+                    <Link href={{ pathname: "/blog-single", query: { slug: blog?.attributes?.slug } }}>  
                         <i className="fa-sharp fa-regular fa-arrow-right"></i>
                       </Link>
                     </div>
@@ -151,14 +151,14 @@ const BlogMain = ({ blogsData }: { blogsData: any }) => {
                  
                      <div className="latest-single ">
                        <div className="latest-thumb">
-                         <Link href="blog-single">
+                       <Link href={{ pathname: "/blog-single", query: { slug: blog?.attributes?.slug } }}>  
                            <Image src={blog.attributes.image.data.attributes.formats.large.url} width={76} height={80} alt="Image" />
                          </Link>
                        </div>
                        <div className="latest-content">
                          <p>{blog.attributes.date}</p>
                          <p>
-                           <Link href="blog-single">
+                         <Link href={{ pathname: "/blog-single", query: { slug: blog?.attributes?.slug } }}>  
                             {blog.attributes.title}
                            </Link>
                          </p>

@@ -90,14 +90,14 @@ const HomeTwoBlog = ({ blogsData }: { blogsData: any  }) => {
            <SwiperSlide>
            <div className="blog-two__slider-single topy-tilt">
              <div className="blog__single-thumb">
-               <Link href="blog-single">
-                 <Image src={blog.attributes.image.data.attributes.formats.large.url} width={620} height={524} alt="Image" />
+             <Link href={{ pathname: "/blog-single", query: { slug: blog?.attributes?.slug } }}>  
+                 <Image src={blog?.attributes?.image?.data?.attributes?.formats?.large?.url} width={620} height={524} alt="Image" />
                </Link>
              </div>
              <div className="blog__single-content">
                <h4>
-                 <Link href="blog-single">
-                  {blog.attributes.title}
+               <Link href={{ pathname: "/blog-single", query: { slug: blog?.attributes?.slug } }}>  
+                  {blog?.attributes?.title}
                  </Link>
                </h4>
                <div className="blog__single-meta">
@@ -105,7 +105,7 @@ const HomeTwoBlog = ({ blogsData }: { blogsData: any  }) => {
                    creative
                    <i className="fa-solid fa-arrow-right"></i>
                  </Link>
-                 <p>{blog.attributes.date}</p>
+                 <p>{blog?.attributes?.date}</p>
                </div>
              </div>
            </div>

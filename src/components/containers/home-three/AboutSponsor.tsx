@@ -16,6 +16,7 @@ import nine  from "public/images/clientss/jaykay.png";
 const AboutSponsor = () => {
   return (
     <div className="sponsor">
+      <h2 className="text-center mb-6">Our Clients</h2>
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-12">
