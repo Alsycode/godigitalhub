@@ -16,12 +16,13 @@ import { useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
 const ProjectMain = ({ projectsData }: { projectsData: any }) => {
   //  const {name, slug, into, specifics} = projectsData.data[0];
+  console.log("projjjjjjjjj",projectsData)
    const [data,setData] = useState([]);
   
    useEffect(() => {
     setData(projectsData);
   }, []); 
-  const projects = projectsData.data;
+  const projects = projectsData?.data;
  const image = projectsData?.data[1]?.attributes?.image?.data?.attributes?.formats?.large?.url;
 //   const projectWithSatmSlug = sl.find(project => project.slug === 'satm');
 
@@ -75,7 +76,7 @@ const ProjectMain = ({ projectsData }: { projectsData: any }) => {
       </div>
       <div className="content">
         <h2>
-          <Link href="project-single">{project.attributes.name}</Link>
+          <Link href={{ pathname: "/project-single", query: { slug: project?.attributes?.slug } }}>{project.attributes.name}</Link>
         </h2>
       </div>
     </div>

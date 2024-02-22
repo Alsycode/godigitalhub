@@ -1,9 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/our-story": "pages/our-story.js",
-  "/404": "pages/404.js",
-  "/client-feedback": "pages/client-feedback.js",
-  "/faq": "pages/faq.js"
+  "/_document": "pages/_document.js",
+  "/our-projects": "pages/our-projects.js",
+  "/project-single": "pages/project-single.js",
+  "/our-story": "pages/our-story.js"
 }
