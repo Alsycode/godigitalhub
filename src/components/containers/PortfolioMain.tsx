@@ -9,52 +9,35 @@ import fifteen from "public/images/projectlist/london.png";
 import sixteen from "public/images/projectlist/satm.png";
 import seventeen from "public/images/projectlist/svjs.png";
 import eighteen from "public/images/projectlist/londonmumbai.png";
-interface WorkDataItem {
-  data: {
-    attributes: {
-      title: string;
-      slug: string;
-      image: {
-        data: {
-          attributes: {
-            formats: {
-              large: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
-    };
-  };
-}
+import { useData } from "../context/dataContext";
 
-interface PortfolioMainProps {
-  workData: WorkDataItem[];
-}
 
-const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
-  // Function to get item info
-  function getItemInfo(index: number) {
-    const item = workData[index]?.data?.attributes;
+const PortfolioMain = () => {
+  const data = useData();
+  const projectsData = data?.projects;
+  console.log("projectsData",projectsData)
+   const namess =  projectsData?.data[0];
+   console.log("namess", namess)
+   function getItemInfo(index: number) {
+     const item = projectsData?.data[index]?.attributes;
 
     return {
-      title: item?.title,
-      slug: item?.slug,
-      image: item?.image?.data?.attributes?.formats?.large?.url,
-    };
-  }
+       title: item?.name,
+       slug: item?.slug,
+       image: item?.image?.data?.attributes?.formats?.large?.url,
+     };
+   }
 
-  const firstItem = getItemInfo(0);
-  const secondItem = getItemInfo(1);
-  const thirdItem = getItemInfo(2);
-  const fourthItem = getItemInfo(3);
-  const fifthItem = getItemInfo(4);
-  const sixthItem = getItemInfo(5);
-  const seventhItem = getItemInfo(6);
-  const eighthItem = getItemInfo(7);
-  const ninthItem = getItemInfo(8);
-
+   const firstItem = getItemInfo(0);
+   const secondItem = getItemInfo(1);
+   const thirdItem = getItemInfo(2);
+   const fourthItem = getItemInfo(3);
+   const fifthItem = getItemInfo(4);
+   const sixthItem = getItemInfo(5);
+   const seventhItem = getItemInfo(6);
+ const eighthItem = getItemInfo(7);
+   const ninthItem = getItemInfo(8);
+console.log("firstItem",firstItem)
 
   return (
     <section className="section portfolio-m fade-wrapper">
@@ -63,7 +46,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
+                <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>
                   <Image src={firstItem.image} width={690} height={706} alt="Image" />
                 </Link>
               </div>
@@ -74,7 +57,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{firstItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>{firstItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -82,7 +65,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
+              <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>
                   <Image src={secondItem.image} width={690} height={706} alt="Image" />
                 </Link>
               </div>
@@ -93,7 +76,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{secondItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{secondItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -101,7 +84,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6 col-xxl-3">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
+              <Link href={{ pathname: "/project-single", query: { slug: thirdItem.slug } }}>
                   <Image src={thirdItem.image} width={330} height={419} alt="Image" />
                 </Link>
               </div>
@@ -112,7 +95,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{thirdItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{thirdItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -120,7 +103,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6 col-xxl-3">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
+              <Link href={{ pathname: "/project-single", query: { slug: fourthItem.slug } }}>
                   <Image src={fourthItem.image} width={330} height={419} alt="Image" />
                 </Link>
               </div>
@@ -131,7 +114,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{fourthItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{fourthItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -139,7 +122,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6 col-xxl-3">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
+              <Link href={{ pathname: "/project-single", query: { slug: fifthItem.slug } }}>
                   <Image src={fifthItem.image}  width={330} height={419} alt="Image" />
                 </Link>
               </div>
@@ -150,7 +133,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{fifthItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{fifthItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -158,8 +141,8 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6 col-xxl-3">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
-                  <Image src={sixthItem.image} width={330} height={419} alt="Image" />
+              <Link href={{ pathname: "/project-single", query: { slug: fifthItem.slug } }}>
+                  <Image src={fifthItem.image} width={330} height={419} alt="Image" />
                 </Link>
               </div>
               <div className="content">
@@ -169,7 +152,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{sixthItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{fifthItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -177,8 +160,8 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
-                  <Image src={seventhItem.image} width={690} height={706} alt="Image" />
+              <Link href={{ pathname: "/project-single", query: { slug: firstItem.slug } }}>
+                  <Image src={firstItem.image} width={690} height={706} alt="Image" />
                 </Link>
               </div>
               <div className="content">
@@ -188,7 +171,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{seventhItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{firstItem.title}</Link>
                 </h3>
               </div>
             </div>
@@ -196,8 +179,8 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
           <div className="col-12 col-lg-6">
             <div className="portfolio-m__single topy-tilt fade-top">
               <div className="thumb">
-                <Link href="service-single">
-                  <Image src={eighthItem.image} width={690} height={706} alt="Image" />
+              <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>
+                  <Image src={secondItem.image} width={690} height={706} alt="Image" />
                 </Link>
               </div>
               <div className="content">
@@ -207,7 +190,7 @@ const PortfolioMain: React.FC<PortfolioMainProps> = ({ workData }) => {
                   </Link>
                 </div>
                 <h3 className="light-title-lg">
-                  <Link href="service-single">{eighthItem.title}</Link>
+                <Link href={{ pathname: "/project-single", query: { slug: secondItem.slug } }}>{secondItem.title}</Link>
                 </h3>
               </div>
             </div>

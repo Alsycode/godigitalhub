@@ -40,10 +40,10 @@ const Home = () => {
     <Layout header={2} footer={2} video={true}>
   <HomeTwoBanner />
       <AboutSponsor />
-      <HomeTwoAward />
+      {/* <HomeTwoAward /> */}
       <HomeTwoOffer />
-      <HomeTwoModal />
-      <HomeTwoPortfolio worksData={worksData} />
+      {/* <HomeTwoModal /> */}
+      <HomeTwoPortfolio projectsData={projectsData} />
       <HomeTwoTestimonial testimonials={testimonials}/>
       <HomeTwoBlog blogsData={blogsData}/> 
       <HomeTwoCta />

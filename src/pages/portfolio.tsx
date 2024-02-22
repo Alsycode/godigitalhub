@@ -11,7 +11,7 @@ const OurPortfolio = () => {
   return (
     <Layout header={2} footer={5} video={0}>
       <CmnBanner title="Portfolio Gallery" navigation="Portfolio Gallery" />
-      <PortfolioMain workData={workData}/>
+      <PortfolioMain />
     </Layout>
   );
 };

@@ -12,8 +12,8 @@ import five from "public/images/portfolio/five.png";
 
 
 
-const HomeTwoPortfolio= ({ worksData }: { worksData: any }) => {
-  console.log("portfoliodat",worksData)
+const HomeTwoPortfolio= ({ projectsData }: { projectsData: any }) => {
+  console.log("portfoliodat",projectsData)
   const [activeFilter, setActiveFilter] = useState("*");
 
   const handleTabClick = (filter: any) => {
@@ -150,21 +150,21 @@ const HomeTwoPortfolio= ({ worksData }: { worksData: any }) => {
         </div>
 
         <div className="row masonry-grid">
-           {worksData?.data?.map((work: any, index: number) => (
+           {projectsData?.data?.map((work: any, index: number) => (
     <div
       key={index}
       className={`col-12 col-md-6 col-xl-4 filter-item-space grid-item-main ${activeFilter === '.' + work?.attributes?.categories || activeFilter === '*' ? '' : 'hidden'}`}
     >
       <div className="portfolio__single topy-tilt fade-top">
       <Link href={{ pathname: 'portfolio'  }}>
-          <Image src={work.attributes.image.data.attributes.formats.large.url} width={450} height={550} alt="Image" />
+          <Image src={work?.attributes?.image?.data?.attributes?.formats?.large?.url} width={450} height={550} alt="Image" />
         </Link>
         <div className="portfolio__single-content">
         <Link href={{ pathname: 'portfolio' }}>
             <i className="fa-sharp fa-solid fa-arrow-up-right"></i>
           </Link>
           <h4>
-          <Link href={{ pathname: 'portfolio' }}>{work.attributes.title}</Link>
+          <Link href={{ pathname: 'portfolio' }}>{work.attributes.name}</Link>
           </h4>
         </div>
       </div>

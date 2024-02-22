@@ -2,8 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/our-projects": "pages/our-projects.js",
-  "/project-single": "pages/project-single.js",
-  "/404": "pages/404.js",
-  "/our-story": "pages/our-story.js"
+  "/portfolio": "pages/portfolio.js",
+  "/service-single": "pages/service-single.js",
+  "/project-single": "pages/project-single.js"
 }
