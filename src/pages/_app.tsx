@@ -17,22 +17,22 @@ import { DataProvider } from "../components/context/dataContext";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-        <Script
-    strategy="lazyOnload"
-    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-  />
+    
+    <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-LTXG19T867`}
+      />
 
-  <Script strategy="lazyOnload">
-    {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}',{
-      page_path: window.location.pathname,
-      
-![image](https://cdn.sanity.io/images/dgsq0x0m/production/61f24596fb210134e5df6a1dfa285de0f24791cc-1549x601.png?w=450)});
-     `}
-  </Script>
+      <Script id="google-analytics-script" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LTXG19T867', {
+          page_path: window.location.pathname,
+          });
+    `}
+      </Script>
     <Suspense fallback={<div>Loading...</div>}>
       <DataProvider>
       <Component {...pageProps} />
