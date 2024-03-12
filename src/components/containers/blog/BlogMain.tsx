@@ -207,11 +207,11 @@ const BlogMain = ({ blogsData }: { blogsData: any }) => {
                     </ul>
                   </div>
                 </div>
-                <div className="widget widget-big ">
+                {/* <div className="widget widget-big ">
                   <Link href="blog-single">
                     <Image src={fourteen} alt="Image" />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

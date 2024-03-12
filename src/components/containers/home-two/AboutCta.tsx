@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import star from "public/images/testimonial/star.png";
 
 const AboutCta = () => {
+  const [state, setState] = useState(0);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const subscribe = async (e: any) => {
+    e.preventDefault();
+
+    setState(1);
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        body: e.target[0].value,
+      });
+
+      const data = await res.json();
+      if (data.error !== null) {
+        throw data.error;
+      }
+      setState(2);
+    } catch (e: any) {
+      setErrorMsg(e);
+      setState(3);
+    }
+  };
+
   return (
     <section className="cta-s section">
       <div className="container">
@@ -20,20 +45,29 @@ const AboutCta = () => {
                     </h2>
                   </div>
                   <div className="footer__single-form">
-                    <form action="#" method="post">
-                      <div className="input-email">
-                        <input
-                          type="email"
-                          name="subscribe-news"
-                          id="subscribeNews"
-                          placeholder="Enter Your Email"
-                          required
-                        />
-                        <button type="submit" className="subscribe">
-                          <i className="fa-sharp fa-solid fa-paper-plane"></i>
-                        </button>
-                      </div>
-                    </form>
+                    {state === 2 ? (
+                      <p className="font-medium mt-4 text-xl text-green-800">
+                        Thanks for subscribing, you will receive mail once we launch our website.
+                      </p>
+                    ) : (
+                      <form onSubmit={subscribe} className="flex flex-col mb-9 mt-4">
+                        <div className="input-email">
+                          <input
+                            type="email"
+                            name="subscribe-news"
+                            id="subscribeNews"
+                            placeholder="Enter Your Email"
+                            required
+                          />
+                          <button type="submit" className="subscribe">
+                            <i className="fa-sharp fa-solid fa-paper-plane"></i>
+                          </button>
+                        </div>
+                        {state === 3 && (
+                          <p className="text-red-500 mt-3">{errorMsg}</p>
+                        )}
+                      </form>
+                    )}
                   </div>
                 </div>
               </div>

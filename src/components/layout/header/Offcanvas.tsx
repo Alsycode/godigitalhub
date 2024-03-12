@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "public/images/logo.png";
+import logo from "public/images/gdhlogo.png";
 
 interface HeaderProps {
   openNav: boolean;
@@ -97,7 +97,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                     Home
                   </button>
                   <ul className={`navbar__sub-menu ${isSubMenuOpen("home")}`}>
-                    <li>
+                    {/* <li>
                       <Link href="/">Creative Agency</Link>
                     </li>
                     <li>
@@ -130,7 +130,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                       <Link href="index-five-light">
                         Interactive Portfolio Light
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li className="navbar__item nav-fade">
@@ -146,7 +146,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                   >
                     Services
                   </button>
-                  <ul
+                  {/* <ul
                     className={`navbar__sub-menu ${isSubMenuOpen("services")}`}
                   >
                     <li>
@@ -155,7 +155,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                     <li>
                       <Link href="service-single">Service Details</Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="navbar__item navbar__item--has-children nav-fade">
                   <button
@@ -167,7 +167,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                   >
                     Projects
                   </button>
-                  <ul
+                  {/* <ul
                     className={`navbar__sub-menu ${isSubMenuOpen("projects")}`}
                   >
                     <li>
@@ -176,7 +176,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                     <li>
                       <Link href="project-single">Project Details</Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="navbar__item navbar__item--has-children nav-fade">
                   <button
@@ -211,7 +211,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                       >
                         Team
                       </button>
-                      <ul
+                      {/* <ul
                         className={`navbar__sub-menu navbar__sub-menu__nested ${isNestedMenuOpen(
                           "team"
                         )}`}
@@ -222,7 +222,7 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                         <li>
                           <Link href="team-single">Team Details</Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li>
                       <Link href="client-feedback">Testimonials</Link>
@@ -242,14 +242,14 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
                   >
                     Blog
                   </button>
-                  <ul className={`navbar__sub-menu ${isSubMenuOpen("blog")}`}>
+                  {/* <ul className={`navbar__sub-menu ${isSubMenuOpen("blog")}`}>
                     <li>
                       <Link href="blog">Blog</Link>
                     </li>
                     <li>
                       <Link href="blog-single">Blog Details</Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
               </ul>
             </div>
@@ -263,28 +263,28 @@ const Offcanvas = ({ openNav, setOpenNav }: HeaderProps) => {
           </div>
           <div className="offcanvas-menu__social social nav-fade">
             <Link
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/godigitalgrowonline"
               target="_blank"
               aria-label="share us on facebook"
             >
               <i className="fa-brands fa-facebook-f"></i>
             </Link>
             <Link
-              href="https://www.twitter.com/"
+              href="https://twitter.com/godigitalhub"
               target="_blank"
               aria-label="share us on twitter"
             >
               <i className="fa-brands fa-twitter"></i>
             </Link>
-            <Link
+            {/* <Link
               href="https://www.pinterest.com/"
               target="_blank"
               aria-label="share us on pinterest"
             >
               <i className="fa-brands fa-linkedin-in"></i>
-            </Link>
+            </Link> */}
             <Link
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/godigital_hub/"
               target="_blank"
               aria-label="share us on instagram"
             >

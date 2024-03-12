@@ -30,8 +30,8 @@ const ProjectDetails = () => {
   return (
     <Layout header={2} footer={5} video={0}>
       <CmnBanner
-        title="Brand Identity"
-        navigation="Brand Identity"
+        title={matchedProject.attributes.name}
+        navigation={matchedProject.attributes.name}
         parent="Projects"
         parentLink="our-projects"
       />

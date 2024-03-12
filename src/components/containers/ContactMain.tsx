@@ -7,6 +7,39 @@ import location from "public/images/location.png";
 import time from "public/images/time.png";
 
 const ContactMain = () => {
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const name = formData.get("contact-name");
+    const email = formData.get("contact-email");
+    const subject = formData.get("subject");
+    const message = formData.get("contact-message");
+    console.log("Subject:", subject); // Log the subject
+
+    try {
+      const response = await fetch("/api/apifour", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+
+      if (response.ok) {
+        console.log("Email sent successfully!");
+        // Optionally, redirect the user or show a success message
+      } else {
+        console.error("Failed to send email");
+        // Handle the failure scenario
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle the error scenario
+    }
+  };
+
+
   return (
     <section className="section contact-m fade-wrapper">
       <div className="container">
@@ -99,11 +132,7 @@ const ContactMain = () => {
                 <div className="col-12 col-lg-6">
                   <div className="contact-main__form  fade-top">
                     <h3>Leave A Message</h3>
-                    <form
-                      action="#"
-                      method="post"
-                      className="section__content-cta"
-                    >
+                    <form onSubmit={handleSubmit} className="section__content-cta">
                       <div className="group-wrapper">
                         <div className="group-input ">
                           <input
@@ -123,12 +152,12 @@ const ContactMain = () => {
                         </div>
                       </div>
                       <div className="group-input drt">
-                        <select className="subject">
+                        <select name="subject" className="subject">
                           <option data-display="Subject">Subject</option>
-                          <option value="1">Account</option>
-                          <option value="2">Service</option>
-                          <option value="3">Pricing</option>
-                          <option value="4">Support</option>
+                          <option value="Account">Account</option>
+                          <option value="Service">Service</option>
+                          <option value="Pricing">Pricing</option>
+                          <option value="Support">Support</option>
                         </select>
                       </div>
                       <div className="group-input ">

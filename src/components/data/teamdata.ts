@@ -40,18 +40,7 @@ const teamMembers = [
       imageSrc: "rakhi.jpg",
       slug: "rakhi-sudheer"
     },
-    {
-      name: "Adithya Sudheer",
-      role: "Marketing Head",
-      description: "Adithya spearheads our marketing efforts with creativity and expertise. With a keen eye for trends and a strategic mindset, he crafts innovative marketing campaigns that effectively engage our target audience. Adithya's leadership ensures that our brand message is communicated effectively across various channels, driving growth and brand awareness. His passion for marketing and dedication to achieving results make him an invaluable asset to our organization.",
-      socialLinks: {
-        facebook: "https://www.facebook.com/",
-        twitter: "https://www.twitter.com/",
-        linkedin: "https://www.linkedin.com/"
-      },
-      imageSrc: "adithya.jpg",
-      slug: "adithya-sudheer"
-    },
+   
      {
      name: "Sandra",
       role: "Graphic designer and Video editor",

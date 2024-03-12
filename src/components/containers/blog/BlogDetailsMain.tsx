@@ -210,11 +210,11 @@ const BlogDetailsMain = () => {
                   </div>
                 </div>
               </div>
-              <div className="section pb-0 comment-form fade-top">
-                <div className="section__header">
+              {/* <div className="section pb-0 comment-form fade-top"> */}
+                {/* <div className="section__header">
                   <h2 className="h2 text-start">Leave a comment</h2>
-                </div>
-                <form action="#" method="post">
+                </div> */}
+                {/* <form action="#" method="post">
                   <div className="form-group-wrapper">
                     <div className="form-group-single">
                       <input
@@ -246,8 +246,8 @@ const BlogDetailsMain = () => {
                       <i className="fa-solid fa-arrow-right-long"></i>
                     </button>
                   </div>
-                </form>
-              </div>
+                </form> */}
+              {/* </div> */}
             </div>
           </div>
           <div className="col-12 col-xl-4">
@@ -371,11 +371,11 @@ const BlogDetailsMain = () => {
                   </ul>
                 </div>
               </div>
-              <div className="widget widget-big ">
+              {/* <div className="widget widget-big ">
                 <Link href="blog-single">
                   <Image src={fourteen} alt="Image" />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
