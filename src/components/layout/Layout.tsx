@@ -45,7 +45,7 @@ const Layout = ({ children ,header, footer, video }: LayoutProps) => {
         />
         <main>{children}
         
-        
+   
         </main>
         <FooterTwo />
         <CustomCursor  onTitleMouseEnter={() => {}}
