@@ -31,7 +31,9 @@ const approach = serviceMatch?.approach;
             <div className="service-details__slider">
               <div className="service-details__slider-single">
                 <div className="poster fade-top">
-                  <Image src={require(`public/images/serviceimages/${Image1}`).default} alt="Image" />
+                {Image1 && (
+                  <Image src={require(`public/images/serviceimages/${Image1}`).default} alt="Image" /> 
+                )}
                 </div>
                 <div className="details-group section__cta text-start">
                   <h3 className="title-anim">Why do we use it?</h3>
@@ -54,7 +56,9 @@ const approach = serviceMatch?.approach;
                     </div>
                     <div className="col-12 col-lg-5">
                       <div className="poster-small">
-                      <Image src={require(`public/images/serviceimages/${Image2}`).default} alt="Image" width={400} height={223} />
+                      {Image2 && (
+                      <Image src={require(`public/images/serviceimages/${Image2}`).default} alt="Image" width={400} height={223} />)
+}
                       </div>
                     </div>
                   </div>

@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import ball from "public/images/ball.png";
-
+import servicesData from "@/components/data/servicedata";
 const HomeTwoOffer = () => {
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -61,198 +61,28 @@ const HomeTwoOffer = () => {
           }}
           className="offer-two__slider"
         >
-          <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  01
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single"></Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  02
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">DIGITAL MARKETING</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  03
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">WEB DEVELOPMENT</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  04
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">WhatsApp Cloud API</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  05
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Search Engine Optimization (SEO)</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  06
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Poster Design</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  07
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Ecommerce So</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-          {/* <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  08
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Photography</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-          {/* <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  05
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Mobile App</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-          {/* <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  06
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Custom Solutions</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-          {/* <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  07
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Ecommerce Solutions</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-          {/* <SwiperSlide>
-            <div className="offer-two__slider-single offer__cta">
-              <div className="offer__cta-single">
-                <span className="sub-title">
-                  08
-                  <i className="fa-solid fa-arrow-right"></i>
-                </span>
-                <h2>
-                  <Link href="service-single">Photography</Link>
-                </h2>
-                <div className="offer-thumb-hover d-none d-md-block">
-                  <Image src={ball} alt="Image" />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
+
+{servicesData?.map((service: any, index: number) => (
+  <SwiperSlide key={index}>
+    <div className="offer-two__slider-single offer__cta">
+      <div className="offer__cta-single">
+        <span className="sub-title">
+          {index}
+          <i className="fa-solid fa-arrow-right"></i>
+        </span>
+        <h2>
+          <Link href={{ pathname: "/service-single", query: { slug: service.slug } }}>
+            {service.name}
+          </Link>
+        </h2>
+        <div className="offer-thumb-hover d-none d-md-block">
+          <Image src={ball} alt="Image" />
+        </div>
+      </div>
+    </div>
+  </SwiperSlide>
+))}
+
         </Swiper>
       </div>
       <div className="offer-two__slider-rtl-w">
@@ -271,15 +101,18 @@ const HomeTwoOffer = () => {
           }}
           className="offer-two__slider-rtl"
         >
-         <SwiperSlide>
+          {servicesData?.map((service: any, index: number) => (
+            <SwiperSlide  key={index} >
             <div className="offer-two__slider-single offer__cta">
               <div className="offer__cta-single">
                 <span className="sub-title">
-                  01
+                  {index}
                   <i className="fa-solid fa-arrow-right"></i>
                 </span>
                 <h2>
-                  <Link href="service-single"></Link>
+                <Link href={{ pathname: "/service-single", query: { slug: service.slug } }}>
+            {service.name}
+          </Link>
                 </h2>
                 <div className="offer-thumb-hover d-none d-md-block">
                   <Image src={ball} alt="Image" />
@@ -287,7 +120,17 @@ const HomeTwoOffer = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          ))}
+         
+          
+        </Swiper>
+      </div>
+    </section>
+  );
+};
+
+export default HomeTwoOffer;
+{/* <SwiperSlide>
             <div className="offer-two__slider-single offer__cta">
               <div className="offer__cta-single">
                 <span className="sub-title">
@@ -366,11 +209,4 @@ const HomeTwoOffer = () => {
                 </div>
               </div>
             </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </section>
-  );
-};
-
-export default HomeTwoOffer;
+          </SwiperSlide> */}

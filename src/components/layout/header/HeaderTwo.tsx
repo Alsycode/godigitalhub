@@ -113,7 +113,7 @@ const HeaderTwo = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                         </ul> */}
                       </li>
                       <li className="navbar__item nav-fade">
-                        <Link href="about-us">About Us</Link>
+                        <Link href="about-us">ABOUT US</Link>
                       </li>
                       <li className="navbar__item navbar__item--has-children nav-fade">
                         <button
@@ -152,15 +152,15 @@ const HeaderTwo = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                           aria-label="dropdown menu"
                           className="navbar__dropdown-label"
                         >
-                          Pages
+                          MORE
                         </button>
                         <ul className="navbar__sub-menu">
                           <li>
                             <Link href="faq">FAQ</Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link href="404">Error</Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link href="our-story">Our Story</Link>
                           </li>
@@ -196,11 +196,11 @@ const HeaderTwo = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                           aria-label="dropdown menu"
                           className="navbar__dropdown-label"
                         >
-                          Blog
+                          UPDATES
                         </button>
                         <ul className="navbar__sub-menu">
                           <li>
-                            <Link href="blog">Blog</Link>
+                            <Link href="blog">Explore Updates</Link>
                           </li>
                           {/* <li>
                             <Link href="blog-single">Blog Details</Link>
