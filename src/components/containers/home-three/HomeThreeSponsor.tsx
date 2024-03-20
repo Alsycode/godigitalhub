@@ -3,17 +3,12 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
-import one from "public/images/sponsor/one.png";
-import two from "public/images/sponsor/two.png";
-import three from "public/images/sponsor/three.png";
-import four from "public/images/sponsor/four.png";
-import five from "public/images/sponsor/five.png";
-import six from "public/images/sponsor/six.png";
+
 
 const HomeThreeSponsor = () => {
   return (
     <div className="sponsor sponsor-three section pt-0">
-      <div className="container-fluid">
+      {/* <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-12">
             <div className="sponsor__slider-w">
@@ -149,7 +144,7 @@ const HomeThreeSponsor = () => {
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
