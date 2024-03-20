@@ -87,10 +87,10 @@ const HomeTwoTestimonial =  ({ testimonials }: { testimonials: any })  => {
       </div>
       <div className="author-meta">
         <div className="author-meta__thumb">
-          <Image src={testimonial.attributes.image.data.attributes.formats.small.url} width={76} height={80} alt="Image" />
+          <Image src={testimonial?.attributes?.image?.data?.attributes?.formats?.small?.url} width={76} height={80} alt="Image" />
         </div>
         <div className="author-meta__content">
-          <h5>{testimonial.attributes.name}</h5>
+          <h5>{testimonial?.attributes?.name}</h5>
           <p>From UK</p>
         </div>
       </div>
